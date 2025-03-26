@@ -1,0 +1,7 @@
+//let regex = /\b[^\sAa]{6,}\b/gi
+let regex = /\b[b-z]{6,}/gi
+console.log('Зразок: ' + str);
+console.log(regex.test(str))
+console.log(str.search(regex))
+let res = str.match(regex); 
+console.log(res);
