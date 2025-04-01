@@ -1,0 +1,29 @@
+var arrUsers = [
+    {
+        userName: 'Ivan',
+        lastName: 'Petrenko',
+        email: 'Ivan.Petrenko123@gmail.com'
+    },
+    {
+        userName: 'Anastasiia',
+        lastName: 'Hryshchenko',
+        email: 'H.Anastassia_123@yahoo.com'
+    },
+    {
+        userName: 'Alexsandr',
+        lastName: 'Ivanov',
+        email: 'Alex_Ivanov89@mail.ru'
+    }
+]
+
+var emailRegex = /^[a-zA-Z0-9_\.]+[a-zA-Z0-9_\.]+@(gmail\.com|yahoo\.com)$/
+
+function validateEmail(array, regex) {
+    for (let i = 0; i < array.length; i++) {
+        let email = array[i]['email']
+        console.log('This Email',email,'is',regex.test(email))
+    }
+
+}
+
+validateEmail(arrUsers, emailRegex)
